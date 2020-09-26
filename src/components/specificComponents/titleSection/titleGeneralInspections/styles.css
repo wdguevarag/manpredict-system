@@ -1,0 +1,25 @@
+.title-section-main {
+    margin: 1%;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    display: flow-root;
+}
+
+.opt-list {
+    float: left;
+    background-color: rgba(83,83,83,0.2) !important;
+    border-top: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 1%;
+    width: fit-content;
+}
+
+.first-opt {
+    border-left: 1px solid grey;
+}
+
+.test {
+    background-color: rgba(247,247,247,0.9);
+}

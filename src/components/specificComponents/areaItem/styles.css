@@ -1,0 +1,25 @@
+.area-list-item {
+    background-color: white;
+    padding: 5%;
+    margin: 4% 0% 0% 4%;
+    border-radius: 5px;
+    box-shadow: 0 0.16rem 0.36rem 0 rgba(0, 0, 0, 0.13), 0 0.03rem 0.09rem 0 rgba(0, 0, 0, 0.11);
+}
+
+.area-list-item:hover {
+    background-color: lightgrey;
+}
+
+.area-list-img {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 3%;
+    border-radius: .4rem;
+    box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.13), 0 0.08rem 0.1rem 0 rgba(0, 0, 0, 0.11);
+}
+
+.area-list-subtitle {
+    border-top: 1px solid black;
+    font-size: 20px;
+    padding-top: 5px;
+}
