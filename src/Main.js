@@ -11,6 +11,7 @@ import TitleClient   from "./components/specificComponents/titleSection/titleCli
 import TitleArea     from "./components/specificComponents/titleSection/titleArea/titleSection";
 import TitleGeneralInspections     from "./components/specificComponents/titleSection/titleGeneralInspections/titleSection";
 
+import TreeView from "./components/mainComponents/treeView/treeView";
 
 import Stuff from "./Stuff";
 import Contact from "./Contact";
@@ -39,9 +40,8 @@ class Main extends Component {
                             <NavLink to="/clients" className='mainItem'>
                                 <div className='mainButton'>MANPREDICT</div>
                             </NavLink>
-                                <NavLink to={`/clients`}><div className='treeItem'>Nivel 1</div></NavLink>
-                                <NavLink to="/stuff"><div className='treeItem'>Nivel 2</div></NavLink>
-                                <NavLink to="/contact"><div className='treeItem'>Nivel 3</div></NavLink>
+
+                            <TreeView/>
 
                         </Grid>
 

@@ -23,21 +23,24 @@ class Areas extends Component {
     }
 
     componentDidMount = async () => {
+        await this.SetAreaData();
+    };
 
+    componentDidUpdate = async () => {
+        await this.SetAreaData();
+    };
+
+    SetAreaData = async () => {
         let res = null;
-
         await GetAreas(this.props.clientId).then(function (result) {
             res = result;
         });
-
         let testArrayAreas = res.result.clients;
-
         let areasToAdd = this.SetAreasList(testArrayAreas);
-
         this.setState({
             areasList: areasToAdd
         });
-    }
+    };
 
     SetAreasList(list) {
         const items = [];
