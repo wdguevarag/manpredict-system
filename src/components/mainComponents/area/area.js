@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
 
 import AreaItem from '../../specificComponents/areaItem/areaItem';
+import "./styles.css";
 
 import { GetAreas } from '../../../store/actions/clientsActions';
 

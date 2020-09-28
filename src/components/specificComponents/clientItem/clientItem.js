@@ -35,7 +35,7 @@ class ClientItem extends Component {
     render() {
         return (
             <div>
-                <NavLink to={`/area/`+this.state.clientId}>
+                <NavLink className={`link-no-decoration`} to={`/area/`+this.state.clientId}>
                 <div className={`${this.state.css}-item cursor-pointer`} onClick={ () => this.SelectClient([this.state.clientId])}>
                     <img src={`${this.props.imgRoute}`} className={`${this.state.css}-img`} alt="logo" />
                     <div className={`${this.state.css}-subtitle`}>{this.props.clientName}</div>

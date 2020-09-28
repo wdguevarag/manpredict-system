@@ -36,7 +36,7 @@ class AreaItem extends Component {
     render() {
         return (
             <div>
-                <NavLink to={`/gen_insp/`+this.state.clientId+`/`+this.state.areaId}>
+                <NavLink className={`link-no-decoration`} to={`/gen_insp/`+this.state.clientId+`/`+this.state.areaId}>
                 <div className={`${this.state.css}-item cursor-pointer`} onClick={ () => this.SelectArea([this.state.areaId])}>
                     <img src={`${this.props.imgRoute}`} className={`${this.state.css}-img`} alt="logo" />
                     <div className={`${this.state.css}-subtitle`}>{this.props.areaName}</div>
