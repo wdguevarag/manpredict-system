@@ -112,7 +112,6 @@ export const ListComponents = () => {
 
             </div>
 
-
             {
                 (actualAction === 0) ?
                     <div className={'icon-add-user'}>

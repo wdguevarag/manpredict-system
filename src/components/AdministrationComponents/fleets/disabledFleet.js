@@ -2,9 +2,10 @@ import React, {useEffect, useRef, useState} from "react";
 import Button from "@material-ui/core/Button";
 
 import {AlertMessage} from "../../generals/alertMessage/alertMessage";
-import * as authActions from "../../../store/actions/authActions";
+import * as fleetActions from "../../../store/actions/fleetsActions";
+import Alert from "@material-ui/lab/Alert";
 
-export const DisabledUser = (props) => {
+export const DisabledFleet = (props) => {
 
     const childRef = useRef();
 
@@ -14,19 +15,18 @@ export const DisabledUser = (props) => {
 
     useEffect(() => {
         setStatusButton(false)
-    }, [props.userSelected])
+    }, [props.fleetSelected])
 
     const actionDisabled = async (status) => {
 
-        let disabledUser = await authActions.PutDisabledUser(status, props.userSelected.userId);
+        let disabledFleet = await fleetActions.PutDisabledFleet(status, props.fleetSelected.fleetId);
 
-
-        if (!disabledUser.success) {
+        if (!disabledFleet.success) {
             childRef.current.handleClick()
             setTypeAlert("warning");
-            setAlertMessage(disabledUser.message)
+            setAlertMessage(disabledFleet.message)
         } else {
-            status ? setAlertMessage('Usuario Deshabilitado') : setAlertMessage('Usuario Habilitado')
+            status ? setAlertMessage('Flota deshabilitada') : setAlertMessage('Flota habilitada')
             setTypeAlert('success')
             childRef.current.handleClick()
 
@@ -40,17 +40,16 @@ export const DisabledUser = (props) => {
             <div>
                 {
                     props.action ?
-                        <div className={'list-user-title'}>Habilitar usuario<br/></div> :
-                        <div className={'list-user-title'}>Deshabilitar usuario<br/></div>
+                        <div className={'list-user-title'}>Habilitar flota<br/></div> :
+                        <div className={'list-user-title'}>Deshabilitar flota<br/></div>
                 }
                 {
                     props.action ?
-                        <div>Está seguro que desea habilitar el usuario:</div> :
-                        <div>Está seguro que desea deshabilitar el usuario:</div>
+                        <div>Está seguro que desea habilitar la flota:</div> :
+                        <div>Está seguro que desea deshabilitar la flota:</div>
                 }
 
-                <br/><br/>{props.userSelected.user}
-                -> {props.userSelected.firstName} {props.userSelected.lastName}
+                <br/>{props.fleetSelected.fleetName}
                 <br/><br/>
 
                 <Button variant="contained" color={props.action ? "primary" : "secondary"} style={{marginTop: 15}}

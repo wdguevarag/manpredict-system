@@ -2,7 +2,7 @@ import React from "react";
 
 import TitleComponents from "../../specificComponents/titleSection/titleComponents/titleComponents";
 
-export const Components = () => {
+export const Administration = () => {
 
     return(
         <>

@@ -47,8 +47,8 @@ export const DisabledComponent = (props) => {
                 }
                 {
                     props.action ?
-                        <div>Está seguro que sea habilitar el componente:</div> :
-                        <div>Está seguro que sea deshabilitar el componente:</div>
+                        <div>Está seguro que desea habilitar el componente:</div> :
+                        <div>Está seguro que desea deshabilitar el componente:</div>
                 }
 
                 <br/>{props.componentSelected.componentName}

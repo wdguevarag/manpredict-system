@@ -47,8 +47,8 @@ export const DisabledElement = (props) => {
                 }
                 {
                     props.action ?
-                        <div>Está seguro que sea habilitar el Elemento:</div> :
-                        <div>Está seguro que sea deshabilitar el Elemento:</div>
+                        <div>Está seguro que desea habilitar el Elemento:</div> :
+                        <div>Está seguro que desea deshabilitar el Elemento:</div>
                 }
 
                 <br/>{props.elementSelected.elementName}

@@ -43,7 +43,7 @@ export const NewElement = (props) => {
 
         if(props.listComponents) setListComponent(props.listComponents)
 
-    },[props.elementEdit, props.listComponents])
+    },[props.elementEdit])
 
     const handleInputChange = (event) => {
         setFromValues({
@@ -54,11 +54,12 @@ export const NewElement = (props) => {
 
     const saveNewElement = async () => {
 
+        console.log('fromvalues=> ', fromValues)
+
         if (
             fromValues.elementName !== "" &&
             fromValues.code !== "" &&
-            fromValues.componentId !== "" &&
-            fromValues.description !== ""
+            fromValues.component !== ""
         ) {
             let listElement = await elementActions.PostNewElement(fromValues);
 
@@ -71,7 +72,7 @@ export const NewElement = (props) => {
                 setFromValues({
                     elementName: "",
                     code: "",
-                    componentId: "",
+                    component: "",
                     description: ""
                 })
                 childRef.current.handleClick()
@@ -92,8 +93,7 @@ export const NewElement = (props) => {
         if (
             fromValues.elementName !== "" &&
             fromValues.code !== "" &&
-            fromValues.componentId !== "" &&
-            fromValues.description !== ""
+            fromValues.component !== ""
         ) {
 
             let editElement = await elementActions.PutEditElement(fromValues, props.elementEdit.elementId);
@@ -109,7 +109,6 @@ export const NewElement = (props) => {
                 props.onClicGetData();
             }
 
-
         } else {
             childRef.current.handleClick()
             setTypeAlert("warning");
@@ -120,6 +119,17 @@ export const NewElement = (props) => {
     return(
         <div>
             <Grid container>
+                <Grid item xs={6} style={{marginTop: 15}}>
+                    <TextField
+                        placeholder={"Código"}
+                        id="code"
+                        name="code"
+                        value={code}
+                        onChange={handleInputChange}
+                        label="Código" variant="outlined" size="small"
+                        required
+                    />
+                </Grid>
                 <Grid item xs={11} style={{marginTop: 15}}>
                     <TextField
                         placeholder={"Nombre"}
@@ -132,19 +142,6 @@ export const NewElement = (props) => {
                         required
                     />
                 </Grid>
-
-                <Grid item xs={6} style={{marginTop: 15}}>
-                    <TextField
-                        placeholder={"Código"}
-                        id="code"
-                        name="code"
-                        value={code}
-                        onChange={handleInputChange}
-                        label="Código" variant="outlined" size="small"
-                        required
-                    />
-                </Grid>
-
                 <Grid item xs={11} style={{marginTop: 15}}>
                     <TextField
                         id="component"
@@ -163,8 +160,6 @@ export const NewElement = (props) => {
                         ))}
                     </TextField>
                 </Grid>
-
-
                 <Grid item xs={11} style={{marginTop: 15}}>
                     <TextField
                         placeholder={"Descripción"}
@@ -178,7 +173,6 @@ export const NewElement = (props) => {
                         required
                     />
                 </Grid>
-
                 <Grid item xs={12}>
                     {
                         props.action === 'new' ?

@@ -1,5 +1,5 @@
 import React from "react";
-import {Components} from "../../components/ComponentsComponents/components/components";
+import {Administration} from "../../components/AdministrationComponents/administration/administration";
 
 export const ComponentsAdmin = () => {
 
@@ -7,9 +7,9 @@ export const ComponentsAdmin = () => {
 
         <>
 
-            <div className={`title-page`}>COMPONENTS ADMINISTRATION</div>
+            <div className={`title-page`}>ADMINISTRATION</div>
 
-            <Components/>
+            <Administration/>
 
         </>
 

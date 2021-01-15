@@ -6,8 +6,9 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
 import { useParams } from "react-router-dom";
-import {ListComponents} from "../../../ComponentsComponents/sectComponents/listComponents";
-import {ListElement} from "../../../ComponentsComponents/sectElements/listElement";
+import {ListComponents} from "../../../AdministrationComponents/components/listComponents";
+import {ListElement} from "../../../AdministrationComponents/elements/listElement";
+import {ListFleet} from "../../../AdministrationComponents/fleets/listFleet";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -53,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const menuItems = ['Componentes','Elementos']
+const menuItems = ['Componentes', 'Elementos', 'Flotas']
 
 export default function ScrollableTabsButtonAuto() {
 
@@ -95,6 +96,9 @@ export default function ScrollableTabsButtonAuto() {
             </TabPanel>
             <TabPanel value={value} index={1}>
                 <ListElement/>
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+                <ListFleet/>
             </TabPanel>
         </div>
     );
