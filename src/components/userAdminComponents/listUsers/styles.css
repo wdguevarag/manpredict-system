@@ -1,0 +1,121 @@
+.list-user-title {
+    font-size: 18px;
+    padding: 1% 1% 1% 0%;
+}
+
+.wi-m {
+    margin-left: 3.5%;
+    margin-bottom: 1%;
+}
+
+.left-section {
+    background-color: #EEF0F2;
+    padding: 1%;
+}
+
+.right-section {
+    background-color: #FAFAFA;
+    padding: 1% 1% 1% 2%;
+    height: 92.5vh;
+}
+
+table, th, td {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #B7BCC0;
+    border-collapse: collapse;
+    padding: 5px 10px;
+}
+
+table {
+    display: block;
+    overflow-y: scroll;
+    max-height: 80vh;
+}
+
+.td-item-name {
+    width: 25%;
+}
+
+.td-item-elem {
+    width: 20%;
+}
+
+.td-item {
+    width: 10%;
+}
+
+tr {
+    max-height: 20px !important;
+}
+
+thead, th {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    color: #FAFAFA;
+    background-color: black;
+}
+
+.table-users {
+    margin-left: 30px;
+    width: 92%;
+}
+
+.user-selected {
+
+    font-size: 16px;
+    font-weight: bold;
+    padding: 1%;
+
+    color: blue;
+}
+
+.centered {
+    text-align: center;
+}
+
+.add-user-section {
+    text-align: right;
+}
+
+.icon-add-user {
+    margin-left: 40%;
+    margin-top: 20%;
+}
+
+
+.validation-section {
+    color: red;
+    margin-top: 3%;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 25px;
+}
+
+
+.status-true {
+    color: black;
+}
+
+.status-false {
+    color: grey;
+}
+
+.status-color-true {
+    border: solid 1px;
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    color: green;
+    width: 85px;
+}
+
+.status-color-false {
+    border: solid 1px;
+    padding: 2px;
+    border-radius: 5px;
+    text-align: center;
+    color: rgba(255,0,0,0.5);
+    width: 85px;
+}

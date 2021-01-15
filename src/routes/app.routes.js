@@ -9,7 +9,21 @@ import TitleGeneralInspections
 import Grid from "@material-ui/core/Grid";
 import TreeView from "../components/mainComponents/treeView/treeView";
 
+import { useHistory } from "react-router-dom";
+
+import * as authService from '../services/loginService'
+import Button from "@material-ui/core/Button";
+
 export const AppRoutes = () => {
+
+    const history = useHistory();
+
+    const OnClickLogout = () => {
+        history.push("/login");
+        authService.logoutUser();
+        window.location.reload();
+    };
+
     return (
         <>
             <Grid container spacing={0} className={`systemMainContent`}>
@@ -21,6 +35,10 @@ export const AppRoutes = () => {
                             </Grid>
                             <Grid item xs={8} style={{paddingTop: 13}}>
                                 SISTEMA DE GESTION DE INFORMACIÓN Y MONITOREO DE CONDICIONES
+                            </Grid>
+                            <Grid item xs={1}>
+                                <Button variant="contained" color="default" className="button-menu-logout" onClick={OnClickLogout}>
+                                    SALIR</Button>
                             </Grid>
                         </Grid>
                     </div>

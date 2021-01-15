@@ -17,3 +17,4 @@ export const GetAreas = async (clientId, dispatch, user) => {
 
     return res.data;
 };
+

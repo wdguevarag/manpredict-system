@@ -63,3 +63,12 @@
 .link-no-decoration {
     text-decoration: none;
 }
+
+.hide-tree {
+    display: none;
+}
+
+
+.show-tree {
+    display: inline;
+}
