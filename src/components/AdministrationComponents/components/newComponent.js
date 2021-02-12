@@ -11,8 +11,6 @@ export const NewComponent = (props) => {
 
     const childRef = useRef();
 
-    console.log('PROPS=> ', props)
-
     const [fromValues, setFromValues] = useState({
         componentName: ""
     });

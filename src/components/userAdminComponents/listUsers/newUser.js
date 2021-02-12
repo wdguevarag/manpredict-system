@@ -234,6 +234,14 @@ export const NewUser = (props) => {
                 }
 
 
+                <Grid item xs={12} style={{marginTop: 15}}>
+                    Firma:
+
+
+
+                </Grid>
+
+
                 <Grid item xs={12}>
                     {
                         props.action === 'new' ?

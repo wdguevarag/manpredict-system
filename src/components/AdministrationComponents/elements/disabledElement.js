@@ -35,8 +35,6 @@ export const DisabledElement = (props) => {
         }
     };
 
-    console.log('ASDAD=> ', props)
-
     return (
         <>
             <div>

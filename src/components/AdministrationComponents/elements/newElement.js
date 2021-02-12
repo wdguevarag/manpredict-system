@@ -12,8 +12,6 @@ export const NewElement = (props) => {
 
     const childRef = useRef();
 
-    console.log('PROPS=> ', props)
-
     const [fromValues, setFromValues] = useState({
         elementName: "", code: "", component: "", description: ""
     });
@@ -53,8 +51,6 @@ export const NewElement = (props) => {
     }
 
     const saveNewElement = async () => {
-
-        console.log('fromvalues=> ', fromValues)
 
         if (
             fromValues.elementName !== "" &&

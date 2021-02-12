@@ -63,8 +63,6 @@ export const ListElement = () => {
         if(count===0) setCount(1);
     }
 
-    console.log('LIST ELEMENT=> ', listElements)
-
     return(
         <Grid container>
             <Grid item xs={8} className={`left-section`}>

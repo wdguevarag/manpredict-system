@@ -11,8 +11,6 @@ export const NewFleet = (props) => {
 
     const childRef = useRef();
 
-    console.log('PROPS=> ', props)
-
     const [fromValues, setFromValues] = useState({
         fleetName: ""
     });

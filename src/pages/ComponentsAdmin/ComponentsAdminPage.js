@@ -7,7 +7,7 @@ export const ComponentsAdmin = () => {
 
         <>
 
-            <div className={`title-page`}>ADMINISTRATION</div>
+            <div className={`title-page non-selectable`}>ADMINISTRATION</div>
 
             <Administration/>
 
